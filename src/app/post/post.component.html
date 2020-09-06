@@ -1,5 +1,11 @@
 <div class="card">
-  <h1>{{post.title}}</h1>
+  <h2>{{post.title}}</h2>
   <hr>
   <p>{{post.text}}</p>
+  <button
+    class="btn"
+    (click)="removePost()"
+  >
+    Удалить</button>
+  <ng-content></ng-content>
 </div>

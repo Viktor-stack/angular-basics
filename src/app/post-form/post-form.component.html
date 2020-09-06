@@ -5,6 +5,7 @@
     type="text"
     placeholder="Title..."
     [(ngModel)]="title"
+    #titleInput
   >
   <!--suppress HtmlFormInputWithoutLabel -->
   <input
@@ -14,4 +15,5 @@
     [(ngModel)]="text"
   >
   <button class="btn" (click)="addPost()">Добфвить POST</button>
+  <button (click)="focusTitle()" class="btn">Focus Title</button>
 </div>
