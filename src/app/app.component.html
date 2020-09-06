@@ -1,1 +1,15 @@
-<h1>Angular Component</h1>
+<div class="container">
+  <h1 class="title-app">Angular Component</h1>
+  <app-post-form
+    (onAdd)="updatePosts($event)"
+  >
+  </app-post-form>
+  <hr>
+  <app-post
+    *ngFor="let p of posts"
+    [post]="p"
+  >
+
+  </app-post>
+</div>
+
