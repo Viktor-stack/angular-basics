@@ -1,8 +1,21 @@
 <div class="container">
+
   <h1>Hello!!</h1>
 
   <p appStyle="red" fontSize="23px" [dStyles]="{border: '1px solid green', borderRadius: '12px', fontWeight:'bold'}">
     Lorem ipsum dolor sit amet.</p>
 
+  <h1 class="title-app">Angular Component</h1>
+  <app-post-form
+    (onAdd)="updatePosts($event)"
+  >
+  </app-post-form>
+  <hr>
+  <app-post
+    *ngFor="let p of posts"
+    [post]="p"
+  >
+
+  </app-post>
 </div>
 
